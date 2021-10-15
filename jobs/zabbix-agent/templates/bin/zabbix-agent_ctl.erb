@@ -1,0 +1,36 @@
+#!/bin/bash
+
+
+PKG_DIR=/var/vcap/packages/zabbix-agent
+JOB_DIR=/var/vcap/jobs/zabbix-agent
+PID_FILE=/var/vcap/sys/run/zabbix-agent/zabbix_agentd.pid
+
+case $1 in
+
+  start)
+    echo "Start Zabbix agent"
+    
+    $PKG_DIR/sbin/zabbix_agentd -c $JOB_DIR/config/zabbix_agentd.conf
+
+    chown -R vcap:vcap $PID_FILE
+    chmod 666 $PID_FILE
+
+    RETURN_VAL=$?
+
+    [ $RETURN_VAL -ne 0 ] && exit $RETURN_VAL
+  ;;
+
+
+  stop)
+    echo "stop"
+    sudo kill $(cat $PID_FILE)
+    sudo kill -9 `ps -ef | grep zabbix_agentd | grep -v grep | awk '{print $2}'`
+  ;;
+
+
+  
+  *)
+    echo "Usage: zabbix-agent_ctl {start|stop}"
+  ;;
+
+esac

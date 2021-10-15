@@ -1,0 +1,23 @@
+---
+name: zabbix-agent
+
+templates:
+  bin/pre-start.erb: bin/pre-start
+  bin/zabbix-agent_ctl.erb: bin/zabbix-agent_ctl
+  config/zabbix_agentd.conf.erb: config/zabbix_agentd.conf
+
+packages:
+  - zabbix-agent
+
+properties: 
+  zabbix-agent.server:
+    description: "Zabbix agent host IP address"
+
+  zabbix-agent.listen_port:
+    description: "Listen port number for communicate with Zabbix server"
+
+  zabbix-agent.server_active:
+    description: "IP:Port String about Zabbix server"
+
+  zabbix-agent.host_metadata:
+    description: "Flag for autoregistration agent"

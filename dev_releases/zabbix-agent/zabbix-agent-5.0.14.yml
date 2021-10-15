@@ -1,0 +1,17 @@
+name: zabbix-agent
+version: 5.0.14
+commit_hash: non-git
+uncommitted_changes: false
+jobs:
+- name: zabbix-agent
+  version: 534ac94027fbf1b5837e7334b2a6316a29ea045f7a50be2e51ad2e8156b35eaa
+  fingerprint: 534ac94027fbf1b5837e7334b2a6316a29ea045f7a50be2e51ad2e8156b35eaa
+  sha1: sha256:3425ec2ff96c9425ff6c2f192576920780449906c6600ab490391be5065cbc9f
+  packages:
+  - zabbix-agent
+packages:
+- name: zabbix-agent
+  version: 4c5352c099625ee81b2f5a19464a6ebef7494553ff7e8b31c05f27f6b6e77285
+  fingerprint: 4c5352c099625ee81b2f5a19464a6ebef7494553ff7e8b31c05f27f6b6e77285
+  sha1: sha256:ea11e79cf01134511f69f8a3c62b8f5fbf70da41d73ba2d7f21db84b3dccbac7
+  dependencies: []
