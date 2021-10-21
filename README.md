@@ -65,3 +65,29 @@
 
 # monitoring-zabbix-release (in progress)
 
+## 1. Github Repository Download
+```
+ $ git clone https://github.com/PaaS-TA/monitoring-zabbix-release.git
+ 
+ $ cd monitoring-zabbix-release
+ 
+ $ wget -O src.zip https://nextcloud.paas-ta.org/index.php/s/Ltq7dPLieHKdHG6/download 
+ 
+ $ unzip src.zip
+ 
+ $ rm src.zip
+ ```
+ 
+ 
+## 2. PaaS-TA monitoring-zabbix-release Upload
+```
+ $ sh create-release.sh
+``` 
+
+
+## 3. PaaS-TA monitoring-zabbix-release Deploy
+```
+ $ cd deployments
+ 
+ $ sh deploy-paasta-monitoring.sh
+ ```
