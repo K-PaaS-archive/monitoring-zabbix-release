@@ -1,4 +1,4 @@
 set -e -x
 
-tar xzvf zabbix-agent/zabbix_agent-5.0.14-linux-3.0-amd64-static.tar.gz -C $BOSH_INSTALL_TARGET
+tar --strip-components=1 -xvf zabbix-agent/zabbix_agent-6.0.8-linux-3.0-amd64-static.tar.gz -C $BOSH_INSTALL_TARGET
 

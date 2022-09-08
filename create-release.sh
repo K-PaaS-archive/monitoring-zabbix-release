@@ -8,9 +8,9 @@ if [ -d ./dev_releases ]; then
   echo "delete dev_releases"
   rm -rf dev_releases
 fi
-if [ -f ./zabbix-agent-release-5.4.1.tgz ]; then
-  echo "delete zabbix-agent-release-5.0.14.tgz"
-  rm -rf zabbix-agent-release-5.0.14.tgz
+if [ -f ./zabbix-agent-release-6.0.8.tgz ]; then
+  echo "delete zabbix-agent-release-6.0.8.tgz"
+  rm -rf zabbix-agent-release-6.0.8.tgz
 fi
 
-bosh create-release --force --tarball zabbix-agent-release-5.0.14.tgz --name zabbix-agent --version 5.0.14
+bosh create-release --force --tarball zabbix-agent-release-6.0.8.tgz --name zabbix-agent --version 6.0.8
