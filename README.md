@@ -71,7 +71,7 @@
  
  $ cd monitoring-zabbix-release
  
- $ wget -O src.zip https://nextcloud.paas-ta.org/index.php/s/Ltq7dPLieHKdHG6/download 
+ $ wget -O src.zip https://nextcloud.paas-ta.org/index.php/s/s9yJnaBoQYTTp6k/download 
  
  $ unzip src.zip
  
